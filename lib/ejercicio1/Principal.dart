@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class Principal extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           title: Text("Tablero de Juego Tactico"),
-          backgroundColor: Colors.black54,
+          backgroundColor: Colors.black87 ,
         ),
         backgroundColor: Colors.white,
 
@@ -28,6 +27,7 @@ class Principal extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Container(
+                      color: Colors.black54,
                       child: Column(
                         children: [
                           nuevaFila(),
@@ -41,7 +41,31 @@ class Principal extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: Container(
-                      color: Colors.red,
+                      color: Colors.black54,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(child: Text("Jugador 1 (Azul)")),
+                                Center(child: Icon(Icons.person, color: Colors.blue,)),
+                                Center(child: Text("Puntos: 120"),),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Center(child: Text("Jugador 2 (Rojo)")),
+                                Center(child: Icon(Icons.person, color: Colors.red,)),
+                                Center(child: Text("Puntos: 120"),),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -84,3 +108,4 @@ class Principal extends StatelessWidget {
   }
 
 }
+
