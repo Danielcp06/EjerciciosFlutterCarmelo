@@ -28,7 +28,14 @@ class Principal extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Container(
-                      color: Colors.green,
+                      child: Column(
+                        children: [
+                          nuevaFila(),
+                          nuevaFila(),
+                          nuevaFila(),
+                          nuevaFila(),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
@@ -50,6 +57,30 @@ class Principal extends StatelessWidget {
       ),
     );
   }
+  Widget nuevaCasilla() {
+    return Expanded(
+      child: Container(
+        margin: EdgeInsets.all(2),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.blueGrey,
+        ),
+        child: Center(child: Icon(Icons.shield)),
+      ),
+    );
+  }
 
+  Widget nuevaFila() {
+    return Expanded(
+      child: Row(
+        children: [
+          nuevaCasilla(),
+          nuevaCasilla(),
+          nuevaCasilla(),
+          nuevaCasilla(),
+        ],
+      ),
+    );
+  }
 
 }
