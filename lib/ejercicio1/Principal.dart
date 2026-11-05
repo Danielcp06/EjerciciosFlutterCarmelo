@@ -15,7 +15,7 @@ class Principal extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           title: Text("Tablero de Juego Tactico"),
-          backgroundColor: Colors.black87 ,
+          backgroundColor: Colors.blueGrey[900],
         ),
         backgroundColor: Colors.white,
 
@@ -27,8 +27,10 @@ class Principal extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Container(
-                      color: Colors.black54,
+
+                      color: Colors.blueGrey[700],
                       child: Column(
+
                         children: [
                           nuevaFila(),
                           nuevaFila(),
@@ -41,31 +43,41 @@ class Principal extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: Container(
-                      color: Colors.black54,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Center(child: Text("Jugador 1 (Azul)")),
-                                Center(child: Icon(Icons.person, color: Colors.blue,)),
-                                Center(child: Text("Puntos: 120"),),
-                              ],
+                      color: Colors.blueGrey[700],
+                      child: Container(
+                        margin: EdgeInsets.all(2.00),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blueGrey[600],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Center(child: Text("Jugador 1 (Azul)")),
+                                  Center(child: Icon(Icons.person, color: Colors.blue,)),
+                                  Center(child: Text("Puntos: 120"),),
+                                ],
+                              ),
                             ),
-                          ),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                Center(child: Text("Jugador 2 (Rojo)")),
-                                Center(child: Icon(Icons.person, color: Colors.red,)),
-                                Center(child: Text("Puntos: 120"),),
-                              ],
-                            ),
-                          )
-                        ],
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Center(child: Text("Jugador 2 (Rojo)")),
+                                  Center(child: Icon(Icons.person, color: Colors.red,)),
+                                  Center(child: Text("Puntos: 120"),),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
+
+
+
                     ),
                   )
                 ],
@@ -124,10 +136,10 @@ class Principal extends StatelessWidget {
   Widget nuevaCasilla() {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(2),
+        margin: EdgeInsets.all(2.00),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: Colors.blueGrey,
+          color: Colors.blueGrey[600],
         ),
         child: Center(child: Icon(Icons.shield)),
       ),
