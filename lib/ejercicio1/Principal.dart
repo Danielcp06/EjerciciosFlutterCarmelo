@@ -73,7 +73,47 @@ class Principal extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Colors.blue,
+                child: ListView(
+                  children: [
+                    Center(child: Text("Historial de Movimientos"),),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        child: Text("1"),
+                      ),
+                      title: Text("Jugador 1 movio pieza"),
+                      subtitle: Text("Caballero a la casilla C4"),
+                      trailing: Icon(Icons.history),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.red,
+                        child: Text("2"),
+                      ),
+                      title: Text("Jugador 2 movio pieza"),
+                      subtitle: Text("Caballero a la casilla C4"),
+                      trailing: Icon(Icons.history),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        child: Text("3"),
+                      ),
+                      title: Text("Jugador 1 movio pieza"),
+                      subtitle: Text("Caballero a la casilla C4"),
+                      trailing: Icon(Icons.history),
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.red,
+                        child: Text("4"),
+                      ),
+                      title: Text("Jugador 2 movio pieza"),
+                      subtitle: Text("Caballero a la casilla C4"),
+                      trailing: Icon(Icons.history),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
