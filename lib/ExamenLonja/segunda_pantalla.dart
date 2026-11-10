@@ -1,6 +1,8 @@
-import 'package:ejercicios/ExamenLonja/mock_data.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'mock_data.dart';
 
 class SegundaPantalla extends StatelessWidget {
   final int id;

@@ -1,7 +1,9 @@
-import 'package:ejercicios/ExamenLonja/mock_data.dart';
-import 'package:ejercicios/ExamenLonja/segunda_pantalla.dart';
+
+import 'package:ejercicios_flutter_carmelo/ExamenLonja/segunda_pantalla.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'mock_data.dart';
 
 void main() {
   runApp(const Principal());
