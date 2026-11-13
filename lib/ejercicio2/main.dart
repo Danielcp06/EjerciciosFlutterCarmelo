@@ -1,5 +1,4 @@
-
-import 'package:ejercicios_flutter_carmelo/ejercicio2/screen.dart';
+import 'package:EjercicioFlutterCarmelo/ejercicio2/screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
