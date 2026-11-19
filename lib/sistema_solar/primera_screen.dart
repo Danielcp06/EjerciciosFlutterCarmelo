@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mock_data.dart';
+import 'segunda_screen.dart';
 
 class PrimeraScreen extends StatelessWidget {
   const PrimeraScreen({super.key});
@@ -23,25 +24,21 @@ class PrimeraScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF616161),
         elevation: 2,
       ),
-      body: ListView.separated(
+      body: ListView.builder(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
         itemCount: planetas.length,
-        separatorBuilder: (context, index) => const Divider(
-          height: 1,
-          thickness: 1,
-          color: Color(0xFFEEEEEE),
-        ),
         itemBuilder: (context, index) {
           final planeta = planetas[index];
           return ListTile(
             contentPadding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 6.0,
+              horizontal: 24.0,
+              vertical: 14.0,
             ),
             leading: ClipOval(
               child: Image.asset(
                 planeta.imagen,
-                width: 46,
-                height: 46,
+                width: 48,
+                height: 48,
                 fit: BoxFit.cover,
               ),
             ),
@@ -63,6 +60,14 @@ class PrimeraScreen extends StatelessWidget {
               Icons.chevron_right,
               color: Color(0xFF9E9E9E),
             ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SegundaScreen(),
+                ),
+              );
+            },
           );
         },
       ),
