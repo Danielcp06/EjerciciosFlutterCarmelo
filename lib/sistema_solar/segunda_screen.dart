@@ -11,9 +11,9 @@ class SegundaScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
-          'Planet Details',
-          style: TextStyle(
+        title: Text(
+          planeta.nombre,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.w500,
@@ -33,18 +33,31 @@ class SegundaScreen extends StatelessWidget {
           },
         ),
       ),
-      body: Align(
-        alignment: Alignment.topCenter,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 16.0),
-          child: ClipOval(
-            child: Image.asset(
-              planeta.imagen,
-              width: 320,
-              height: 320,
-              fit: BoxFit.cover,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: ClipOval(
+                child: Image.asset(
+                  planeta.imagen,
+                  width: 220,
+                  height: 220,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-          ),
+            const SizedBox(height: 32),
+            Text(
+              planeta.descripcion,
+              style: const TextStyle(
+                fontSize: 17,
+                height: 1.4,
+                color: Color(0xFF333333),
+              ),
+            ),
+          ],
         ),
       ),
     );

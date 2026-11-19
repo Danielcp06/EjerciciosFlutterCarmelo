@@ -18,19 +18,19 @@ class MockPlanetas {
       nombre: 'Mercury',
       distancia: '57.9 Millones Km',
       imagen: 'assets/images/mercury.png',
-      descripcion: 'El planeta más cercano al Sol y el más pequeño.',
+      descripcion: 'Mercury is the smallest planet in our solar system and closest to the Sun.',
     ),
     Planeta(
       nombre: 'Venus',
       distancia: '108.2 Millones Km',
       imagen: 'assets/images/venus.png',
-      descripcion: 'Segundo planeta desde el Sol y el más caluroso del sistema solar.',
+      descripcion: 'Venus’ thick atmosphere makes it the hottest planet in our solar system.',
     ),
     Planeta(
       nombre: 'Earth',
       distancia: '149.5 Millones Km',
       imagen: 'assets/images/earth.png',
-      descripcion: 'Tercer planeta del sistema solar y el único con agua líquida en la superficie.',
+      descripcion: 'Earth is our home planet and the only place we know of so far that’s inhabited by living things.',
     ),
   ];
 }
