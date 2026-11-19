@@ -52,6 +52,13 @@ class PrimeraScreen extends StatelessWidget {
                 color: Color(0xFF333333),
               ),
             ),
+            subtitle: Text(
+              planeta.distancia,
+              style: const TextStyle(
+                fontSize: 13,
+                color: Color(0xFF888888),
+              ),
+            ),
             trailing: const Icon(
               Icons.chevron_right,
               color: Color(0xFF9E9E9E),
