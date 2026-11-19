@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'mock_data.dart';
 
 class SegundaScreen extends StatelessWidget {
-  const SegundaScreen({super.key});
+  final Planeta planeta;
+
+  const SegundaScreen({super.key, required this.planeta});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class SegundaScreen extends StatelessWidget {
           padding: const EdgeInsets.only(top: 16.0),
           child: ClipOval(
             child: Image.asset(
-              'assets/images/earth.png',
+              planeta.imagen,
               width: 320,
               height: 320,
               fit: BoxFit.cover,

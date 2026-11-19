@@ -64,7 +64,7 @@ class PrimeraScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const SegundaScreen(),
+                  builder: (context) => SegundaScreen(planeta: planeta),
                 ),
               );
             },
